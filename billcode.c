@@ -29,21 +29,21 @@ int main(void)
     {
         tax = get_int("Tax Precentage: ");
     }
-    while (tax < 1);
+    while (tax < 0);
 
 // finding the tip precentage
     do
     {
         tip = get_int("Tip precentage of bill: ");
     }
-    while (tip < 1);
+    while (tip < 0);
 
 // finding the amount of the bill
     do
     {
         bill = get_int("How much was the bill: ");
     }
-    while (bill < 1);
+    while (bill < 0);
 
     // calculate how much each person pays
     totalpay = (bill)+(tip*bill/100)+(tax*bill/100);
