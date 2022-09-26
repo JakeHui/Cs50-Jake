@@ -19,17 +19,19 @@ int max(int num1, int num2) {
    return result;
 }
 
-int main (void) {
+int main () {
+   int num1
+   int num2
 
    /* local variable definition */
-   int a = 200;
-   int b = 200;
+   num1 = get_int("Number A: ");
+   num2 = get_int("Number B: ");
    int ret;
 
    /* calling a function to get max value */
-   ret = max(a, b);
+   ret = max(num1,num2);
 
-   if (ret == 0) 
+   if (ret == 0 && num1 = 0 && num2 = 0) 
    printf( "Values are the same \n");
    else
    printf( "Max value is : %d\n", ret );
