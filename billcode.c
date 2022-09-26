@@ -4,6 +4,14 @@
 //the bill amount, the tax, and the tip.
 // Ask the user for the bill amount, the tax rate, and the tip rate!
 // Print the result as a bill.
+
+// ask for bill
+// ask for tax
+// ask for tip
+// ask for no of people
+// add values together in a function
+// print values
+
 #include <cs50.h>
 #include <stdio.h>
 #include <math.h>
@@ -51,8 +59,13 @@ int main(void)
     personpay = (total/nofpeople);
 
     // printing
-    printf("Each person pays: %f", personpay);
-    printf("\n");
+    printf("\n\n\n");
+    printf("Bill: %f \n", bill);
+    printf("Tip: %f \n", tip);
+    printf("Tax: %f \n", tax);
+    printf("Total: %f \n", total);
+    printf("Each person pays: %f \n", personpay);
+    printf("\n\n\n");
 
     return 0;
 }
