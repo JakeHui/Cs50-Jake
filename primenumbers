@@ -14,10 +14,7 @@ int main()
     }
     while (num < 2);
     // 1 and everything less does not have a positive prime factor so it wont accept anything less than 2
-
-    if (num == 1)
-    2123
-
+    
     primefactors(num);
     //function for finding prime factors
     return 0;
