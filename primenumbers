@@ -1,0 +1,49 @@
+#include <cs50.h>
+#include <stdio.h>
+#include <math.h>
+
+int primefactors (int num);
+
+int main()
+{
+    int num;
+    do
+    {
+        num = get_int("Enter a positive interger: ");
+        //prompts user for a positive interger
+    }
+    while (num < 2);
+    // 1 and everything less does not have a positive prime factor so it wont accept anything less than 2
+
+    if (num == 1)
+    2123
+
+    primefactors(num);
+    //function for finding prime factors
+    return 0;
+}
+
+int primefactors (int num)
+//function for solving a prime value
+{
+    int count;
+    printf("\nPrime Factors of %d are: \n", num);
+    for(count = 2; num > 1; count++)
+    // starts at 2 because everything is divisible by 1 and 1 isnt prime
+    // repeats until the number divided is less than one meaning it gets divided prefectly
+    {
+        while(num % count == 0)
+        //repeats until it divides something with a remainder
+        // if the number is divisible it repeats until it is divided by something with no other factors
+        // if the number has another factor thats divisible by something less it will be divided first
+        // because it starts from 2 and goes up
+        {
+            printf("%d ", count);
+            //prints the value it gets every cycle
+            num = num / count;
+            //divides the number by the found factor with no remainder
+        }
+    }
+    printf("\n\n");
+    return num;
+}
