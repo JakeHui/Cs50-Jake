@@ -30,6 +30,7 @@ def selectWord(choice):
 
 
 def Menu():
+    global choice #make global so can be used in score
     os.system('clear')
     print("####################################")
     print("#     Word Game for you            #")
@@ -78,7 +79,7 @@ def playing():
         for letter in word:
             if letter in guesses:
                 print(letter, end=" " )
-                if len(guesses)>=len(set(word))-1:
+                if len(guesses)>=len(set(word))-1: #change to set which will only hold one of each symbol, deletes any duplicates
                     check = False
             else:
                 print ("_", end=" ")
@@ -88,19 +89,23 @@ def playing():
             if guess not in guesses:
                 guesses += guess
                 print(" Good guess ")
+                print("Turns = ", turns)
             else:
                 print("You have used that letter before")
         else:
             turns -=1
             print("sorry guess again")
+            print("Turns = ", turns) #print number of turns left
         print(guesses)
     if(not check):
-        print("you guessed correctly, your score was...")
+        print("you guessed correctly, your score was", turns*choice) #print score which is turns*difficulty
+        print("Word was ", word) #tell user what the word was
 
     else:
         print("Sorry you did not guess correctly...")
+        print("Word was ", word) #tell user what the word was
     input("Press enter to countinue")
     Menu()
 Menu()
-print(word)
+# print(word) #dont print the word for the user, they have to guess themselves
 playing()
