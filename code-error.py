@@ -79,6 +79,10 @@ def playing():
         for letter in word:
             if letter in guesses:
                 print(letter, end=" " )
+                #ERROR HERE
+                #
+                #
+                #
                 if len(guesses)>=len(set(word))-1: #change to set which will only hold one of each symbol, deletes any duplicates
                     check = False
             else:
